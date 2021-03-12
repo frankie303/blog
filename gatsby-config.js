@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Mert's Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Mert Ciflikli`,
+      summary: `Frontend Engineer who lives and works in Berlin.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: ``,
+    siteUrl: `https://blog.mertciflikli.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `_frankie303`,
     },
   },
   plugins: [
@@ -112,11 +112,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Mert's Blog`,
+        short_name: `Mert's Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
+        theme_color_in_head: false,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
