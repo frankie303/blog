@@ -40,16 +40,19 @@ const Bio = () => {
         style={{
           marginRight: "1rem",
           marginBottom: 0,
-          width: "4rem",
-          height: "4rem",
+          width: "3.5rem",
+          height: "3.5rem",
           borderRadius: "50%",
         }}
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong>. {author?.summary || null}
+          Written by{" "}
+          <a href={`https://twitter.com/${social?.twitter || ``}`}>
+            <strong>{author.name}</strong>
+          </a>
+          . {author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>Twitter</a>
         </p>
       )}
     </div>
