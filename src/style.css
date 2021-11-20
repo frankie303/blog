@@ -83,6 +83,19 @@ body {
   font-size: var(--fontSize-1);
   color: var(--color-accent);
   background-color: var(--color-dark);
+  --pink: rgb(255, 167, 196);
+  --inlineCode-bg: rgba(115, 124, 153, 0.2);
+  --inlineCode-text: #e6e6e6;
+  --form-shadow: 0 2px 15px 0 rgba(26, 26, 27, 0.637);
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  border-radius: 0.3em;
+  background: var(--inlineCode-bg);
+  color: var(--inlineCode-text);
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
 }
 
 footer {
@@ -151,7 +164,7 @@ h1 > a {
 }
 
 p > a {
-  color: inherit;
+  --textLink: var(--pink);
   text-decoration: none;
 }
 

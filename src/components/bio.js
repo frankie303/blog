@@ -36,7 +36,7 @@ const Bio = () => {
         src={profilePic}
         width={50}
         height={50}
-        alt="Profile picture"
+        alt="Profile"
         style={{
           marginRight: "1rem",
           marginBottom: 0,
