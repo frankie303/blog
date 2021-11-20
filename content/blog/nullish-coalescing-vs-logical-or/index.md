@@ -1,5 +1,5 @@
 ---
-title: "Nullish Coalescing (??) vs Logical Or Operator (||)"
+title: "Nullish Coalescing (??) vs Logical Or (||)"
 date: "2021-11-20"
 description: "The difference between ?? and ||"
 ---
