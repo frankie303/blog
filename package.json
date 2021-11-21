@@ -1,7 +1,9 @@
 {
   "name": "mert-ciflikli-blog",
   "private": true,
-  "engines": {"node": "12.x || 14.x"},
+  "engines": {
+    "node": "12.x || 14.x"
+  },
   "description": "Mert Ciflikli Blog",
   "version": "1.0.0",
   "author": "Mert Ciflikli <uzeyirmertciflikli@gmail.com>",
@@ -34,6 +36,9 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.3.0",
+    "eslint-plugin-react": "^7.27.1",
     "prettier": "2.2.1"
   },
   "homepage": "https://blog.mertciflikli.com/",
@@ -41,7 +46,8 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop"
+    "format": "prettier --write '{gatsby-*.js,src/**/*.{js,jsx,json,css}}'",
+    "start": "npm run develop",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public ."
   }
 }

@@ -1,14 +1,14 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { formatReadingTime } from "../utils/helpers"
+import * as React from 'react';
+import { Link, graphql } from 'gatsby';
+import { formatReadingTime } from '../utils/helpers';
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Bio from '../components/bio';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata?.title || `Title`
-  const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`;
+  const posts = data.allMarkdownRemark.nodes;
 
   if (posts.length === 0) {
     return (
@@ -21,7 +21,7 @@ const BlogIndex = ({ data, location }) => {
           gatsby-config.js).
         </p>
       </Layout>
-    )
+    );
   }
 
   return (
@@ -29,8 +29,8 @@ const BlogIndex = ({ data, location }) => {
       <SEO title="A blog by Mert Ciflikli" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+        {posts.map((post) => {
+          const title = post.frontmatter.title || post.fields.slug;
 
           return (
             <li key={post.fields.slug}>
@@ -60,14 +60,14 @@ const BlogIndex = ({ data, location }) => {
                 </section>
               </article>
             </li>
-          )
+          );
         })}
       </ol>
     </Layout>
-  )
-}
+  );
+};
 
-export default BlogIndex
+export default BlogIndex;
 
 export const pageQuery = graphql`
   query {
@@ -91,4 +91,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

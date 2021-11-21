@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import profilePic from "../assets/profile-pic.png"
+import * as React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import profilePic from '../assets/profile-pic.png';
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -24,11 +24,11 @@ const Bio = () => {
         }
       }
     }
-  `)
+  `);
 
   // Set these values by editing "siteMetadata" in gatsby-config.js
-  const author = data.site.siteMetadata?.author
-  const social = data.site.siteMetadata?.social
+  const author = data.site.siteMetadata?.author;
+  const social = data.site.siteMetadata?.social;
 
   return (
     <div className="bio">
@@ -38,16 +38,16 @@ const Bio = () => {
         height={50}
         alt="Profile"
         style={{
-          marginRight: "1rem",
+          marginRight: '1rem',
           marginBottom: 0,
-          width: "3.5rem",
-          height: "3.5rem",
-          borderRadius: "50%",
+          width: '3.5rem',
+          height: '3.5rem',
+          borderRadius: '50%',
         }}
       />
       {author?.name && (
         <p>
-          Written by{" "}
+          Written by{' '}
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
             <strong>{author.name}</strong>
           </a>
@@ -56,7 +56,7 @@ const Bio = () => {
         </p>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Bio
+export default Bio;
